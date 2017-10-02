@@ -1,0 +1,41 @@
+﻿/* Tablet and bigger */
+@@media ( min-width: 768px ) {
+    .grid-divider {
+        position: relative;
+        padding: 0;
+    }
+
+        .grid-divider > [class*='col-'] {
+            position: static;
+        }
+
+            .grid-divider > [class*='col-']:nth-child(n+2):before {
+                content: "";
+                border-left: 1px solid #DDD;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
+
+    .col-padding {
+        padding: 0 15px;
+    }
+}
+
+.container {
+    margin-top: 20px;
+}
+
+img {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
+}
+
+    img:hover {
+        filter: none; /* IE6-9 */
+        -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+    }

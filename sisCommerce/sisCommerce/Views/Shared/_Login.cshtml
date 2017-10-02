@@ -1,0 +1,71 @@
+﻿
+@if (@Html.Raw(ViewBag.Name).ToString() == null || @Html.Raw(ViewBag.Name).ToString() == "" || @Html.Raw(ViewBag.Name).ToString() == "Usuário/Senha incorretos")
+{
+    <li class="">
+        @if (@Html.Raw(ViewBag.Name).ToString() == "")
+        {
+            <a href="#"> </a>
+        }
+        else
+        {
+            <a href="#"> @Html.Raw(ViewBag.Name) </a>
+        }
+    </li>
+
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+        <ul id="login-dp" class="dropdown-menu">
+            <li>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        @using (Html.BeginForm("UserValidate", "Menu", FormMethod.Post))
+                        {
+                            @Html.ValidationSummary(true)
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="username" placeholder="Username" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Login" class="btn btn-default" />
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+}
+else
+{
+
+    <li class="active"><a href="#"> @Html.Raw(ViewBag.Name) </a></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+        <ul id="login-dp" class="dropdown-menu">
+            <li>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        @using (Html.BeginForm("UserLoggout", "Menu", FormMethod.Post))
+                        {
+                            @Html.ValidationSummary(true)
+
+                            <div class="form-group">
+                                <input type="submit" value="Sair" class="btn btn-default" />
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+}
+
+

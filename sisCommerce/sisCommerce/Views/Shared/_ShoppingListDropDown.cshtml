@@ -1,0 +1,58 @@
+﻿@model sisCommerce.Models.ProductsShoppingListViewModel
+
+<style>
+    #containerr {
+        max-width: 50px; max-height: 50px;
+        /*width: auto;
+        height: auto;*/
+    }
+</style>
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
+        <span class="glyphicon glyphicon-shopping-cart"></span> 
+        @{
+            if (!(@Html.Raw(ViewBag.Name).ToString() == null || @Html.Raw(ViewBag.Name).ToString() == "" || @Html.Raw(ViewBag.Name).ToString() == "Usuário/Senha incorretos"))
+            {
+                //show quantity of products in wishlist
+                Model.ShoppingList.Count();
+            }
+          }
+            - @Resources.Site.Itens
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-cart" role="menu">
+        @{  
+            if (!(@Html.Raw(ViewBag.Name).ToString() == null || @Html.Raw(ViewBag.Name).ToString() == "" || @Html.Raw(ViewBag.Name).ToString() == "Usuário/Senha incorretos"))
+            {
+                foreach (var item in Model.ShoppingList)
+                {
+                    <li>
+                        <span class="item">
+                            <span class="item-left">
+                                @if (item.image != null)
+                                {
+                                    <img src="@Url.Content(item.image)" class="containerr" style="  max-width: 50px; max-height: 50px; ">
+                                }
+                        
+                                <span class="item-info">
+                                    <span>@Html.DisplayFor(modelItem => item.name) </span>
+                                    <span>
+                                        @Html.DisplayFor(modelItem => item.price)
+                                        <button class="btn btn-xs btn-info pull-right">@Html.DisplayFor(modelItem => item.quantity_wish_user)</button>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <button class="btn btn-xs btn-danger pull-right">x</button>
+                            </span>
+                        </span>
+                    </li>
+                }
+            }
+          }
+
+        <li class="divider"></li>
+        <li><a class="text-center" href="">@Resources.Site.ListadeDesejos</a></li>
+    </ul>
+</li>

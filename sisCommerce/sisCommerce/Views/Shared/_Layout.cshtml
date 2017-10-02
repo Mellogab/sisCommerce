@@ -1,0 +1,129 @@
+﻿@using Resources
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/main.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/navbarCartDropDown.css" rel="stylesheet" type="text/css"/>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/navbar/navbarBootsnipp.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/navbar/navbarBootsnipp.js"></script>
+</head>
+<body>
+    <style>
+        #sendSubmit
+        {    
+            visibility: hidden;
+        }
+    </style>
+    <nav class="[ navbar navbar-fixed-top ][ navbar-bootsnipp animate ]" role="navigation">
+        <div class="[ container ]">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="[ navbar-header ]">
+                <button type="button" class="[ navbar-toggle ]" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="[ sr-only ]">Toggle navigation</span>
+                    <span class="[ icon-bar ]"></span>
+                    <span class="[ icon-bar ]"></span>
+                    <span class="[ icon-bar ]"></span>
+                </button>
+                <div class="[ animbrand ]">
+                    <a class="[ navbar-brand ][ animate ]" href="">sisPOS</a>
+                </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="[ collapse navbar-collapse ]" id="bs-example-navbar-collapse-1">
+                <ul class="[ nav navbar-nav navbar-right ]">
+
+                    <li class="[ visible-xs ]">
+                        <form action="http://bootsnipp.com/search" method="GET" role="search">
+                            <div class="[ input-group ]">
+                                <input type="text" class="[ form-control ]" name="q" placeholder="Search for snippets">
+                                <span class="[ input-group-btn ]">
+                                    <button class="[ btn btn-primary ]" type="submit"><span class="[ glyphicon glyphicon-search ]"></span></button>
+                                    <button class="[ btn btn-danger ]" type="reset"><span class="[ glyphicon glyphicon-remove ]"></span></button>
+                                </span>
+                            </div>
+                        </form>
+                    </li>
+
+                    @{
+                        List<KeyValuePair<string, int>> listLanguages = new List<KeyValuePair<string, int>>()
+                        {
+                            new KeyValuePair<string, int>("pt-br", 0),
+                            new KeyValuePair<string, int>("en-us", 1)
+                        };
+
+                        SelectList languageSelectList = new SelectList(listLanguages, "Value", "Key");
+                    }
+
+                    <li class="[ dropdown ]">
+                        <div style="margin-top:15px;">
+                            @using (Html.BeginForm("ChangeCurrentCulture", "Main", FormMethod.Post, new { id = "myForm" }))
+                            {
+                                @Html.DropDownList("language", languageSelectList, new { onchange = "changeLanguage();" })
+                            }
+                        </div>    
+                    </li>
+
+                    <li><a href="#" class="[ animate ]">@Resources.Site.Carrinho @Resources.Site.de @Resources.Site.Compras</a></li>
+
+                    <li>
+                        <a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">@Resources.Site.Produtos<span class="[ caret ]"></span></a>
+                        <ul class="[ dropdown-menu ]" role="menu">
+                            <li>
+                                <a href="#" class="[ animate ]">@Html.ActionLink(Resources.Site.GerenciarProdutos, "ManagerProducts", "Products")  </a>
+
+                            </li>
+                            <!--<li><a href="#" class="[ animate ]">Button Builder <span class="[ pull-right glyphicon glyphicon-edit ]"></span></a></li>-->
+                        </ul>
+                    </li>
+                    
+                    @{ Html.RenderPartial("_Login");  }
+                    
+                    @{ Html.RenderPartial("_ShoppingListDropDown"); }
+
+                    <li class="[ hidden-xs ]"><a href="#toggle-search" class="[ animate ]"><span class="[ glyphicon glyphicon-search ]"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Barra de pesquisa -->
+        <div class="[ bootsnipp-search animate ]">
+            <div class="[ container ]">
+                <form action="http://bootsnipp.com/search" method="GET" role="search">
+                    <div class="[ input-group ]">
+                        <input type="text" class="[ form-control ]" name="q" placeholder="Search for snippets and hit enter">
+                        <span class="[ input-group-btn ]">
+                            <button class="[ btn btn-danger ]" type="reset"><span class="[ glyphicon glyphicon-remove ]"></span></button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+
+        function changeLanguage() {
+            $('#myForm').submit();
+        }
+    </script>
+    <footer>
+        <p>© 2017<a style="color:#0a93a6; text-decoration:none;" href="https://www.github.com/Mellogab"> Gabriel Costa</a>, Todos os direitos reservados 2016-2017.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿<!--model sisCommerce.Models.Products-->
+<link href="~/Content/main.css" rel="stylesheet" type="text/css" />
+
+<!--  model IEnumerable<sisCommerce.Models.Products>  -->
+@model sisCommerce.Models.ProductsShoppingListViewModel
+
+@{ ViewBag.Title = "Index"; }
+
+<style>
+    /*import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);*/
+    header {
+        background: url(https://www.verifone.com/sites/default/files/styles/16_9_768x432/public/verifone-c680-1710x1000.jpg?itok=n6xNg9W7);*/
+        width: 100%;
+        height: 400px;
+        /*background-color: #060;
+        color: #fff;
+        text-align: center;*/
+        text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+    }
+
+        header > p {
+            color: #fff;
+            font-size: 100%;
+            font-weight: bold;
+        }
+
+        header > h2 {
+            color: #fff;
+            font-size: 450%;
+            font-weight: bold;
+        }
+
+    .header {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        /*background: rgba(0, 0, 0, 0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;*/
+        -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+    }
+
+</style>
+</style>
+    <script type="text/javascript">
+        $('.alert-autocloseable-danger').hide();
+    </script>
+    <!-- Page Content -->
+    <div class="container">
+@if ((@Html.Raw(ViewBag.Name).ToString() == null || @Html.Raw(ViewBag.Name).ToString() == "" || @Html.Raw(ViewBag.Name).ToString() == "Usuário/Senha incorretos"))
+{
+        <div class="alert alert-danger alert-autocloseable-danger">
+            
+                @if (ViewBag.Message != null)
+                {
+                    @Html.Raw(ViewBag.Message)
+                    <script> 
+                        $('.alert-autocloseable-danger').show();
+                        $('.alert-autocloseable-danger').delay(2500).fadeOut("slow", function () {
+
+                        });
+                    </script>
+                }
+            
+        </div>
+}
+        <!-- Generate dynamic -->
+        <!-- Jumbotron Header -->
+        <p>
+            <header class="jumbotron hero-spacer">
+                <h2 class="ola">Terminais</h2>
+                <p>Venda on-line</p>
+                <p>
+                    <a href="#" class="btn btn-primary btn-large">Confira Nossos Produtos!</a>
+                </p>
+            </header>
+        </p>
+        <hr>
+        
+        @{ int count = 1;}
+        @foreach (var item in Model.Products)
+        {
+            if(count == 6)
+            {
+                count = 1;
+                <br/>
+            }
+            <div class="col-md-2 column productbox">
+                @if (item.image != null)
+                {
+                    
+                    <div class="containerr">
+                        <img src="@Url.Content(item.image)" class="img-responsive">
+                    </div>
+                }
+                
+                <div class="producttitle">@Html.DisplayFor(modelItem => item.name)</div>
+                <div class="producttitle">
+                    <!-- Disparar para form de inserir lista de produtos -->
+                    @if (  !(@Html.Raw(ViewBag.Name).ToString() == null || @Html.Raw(ViewBag.Name).ToString() == "" || @Html.Raw(ViewBag.Name).ToString() == "Usuário/Senha incorretos") ) { 
+                        using (Html.BeginForm("InsertProductShoppingList", "ShoppingListShoppingCart", FormMethod.Post))
+                        {
+                            @Html.ValidationSummary(true)
+                            <input type="hidden" name="idProduct" value="@Html.DisplayFor(modelItem => item.id)" />
+                            <div class="pull-right">
+                                <button href="#" type="submit" class="btn btn-success btn-sm" role="button"><b>WISH</b></button>
+                            </div>
+                        }
+                    }      
+                    <div class="pricetext"> @Html.DisplayFor(modelItem => item.description) </div>
+                </div>
+                <div class="productprice">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-danger btn-sm" role="button"><b>BUY</b></a>
+                    </div>
+                    <div class="pricetext">R$ @Html.DisplayFor(modelItem => item.price)</div>
+                </div>
+            </div>
+            count++;
+        }
+
+    </div>

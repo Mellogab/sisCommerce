@@ -1,0 +1,155 @@
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\ApplicationInsights.config
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\csc.exe
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\vbc.exe
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\VBCSCompiler.exe
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\sisCommerce.dll.config
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\sisCommerce.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\sisCommerce.pdb
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Dapper.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.Web.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Helpers.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Mvc.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Razor.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Webpages.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Webpages.Razor.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Dapper.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.Web.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Razor.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Webpages.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Webpages.Razor.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Helpers.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\bin\System.Web.Mvc.xml
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\obj\Debug\sisCommerce.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\obj\Debug\sisCommerce.dll
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\obj\Debug\sisCommerce.pdb
+C:\Users\Gabriel\Desktop\sisCommerce\sisCommerce\obj\Debug\sisCommerce.csprojResolveAssemblyReference.cache
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\ApplicationInsights.config
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\csc.exe
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\vbc.exe
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\VBCSCompiler.exe
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\sisCommerce.dll.config
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\sisCommerce.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\sisCommerce.pdb
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Dapper.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.Web.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.ApplicationInsights.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Helpers.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Mvc.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Razor.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Webpages.Deployment.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Webpages.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Webpages.Razor.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Dapper.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.Web.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.ApplicationInsights.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Razor.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Webpages.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Webpages.Deployment.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Webpages.Razor.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Helpers.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\System.Web.Mvc.xml
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\obj\Debug\sisCommerce.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\obj\Debug\sisCommerce.pdb
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\obj\Debug\sisCommerce.App_GlobalResources.Site.resources
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\obj\Debug\sisCommerce.csproj.GenerateResource.Cache
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\bin\en-us\sisCommerce.resources.dll
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\obj\Debug\sisCommerce.App_GlobalResources.Site.en-us.resources
+C:\Users\GabrielC2\Documents\Visual Studio 2015\Projects\sisCommerce\sisCommerce\obj\Debug\en-us\sisCommerce.resources.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\ApplicationInsights.config
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\csc.exe
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\vbc.exe
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\VBCSCompiler.exe
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\sisCommerce.dll.config
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\sisCommerce.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\sisCommerce.pdb
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\en-us\sisCommerce.resources.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Dapper.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.Web.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Helpers.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Mvc.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Razor.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Webpages.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Webpages.Razor.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Dapper.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.Web.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Razor.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Webpages.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Webpages.Razor.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Helpers.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\bin\System.Web.Mvc.xml
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\obj\Debug\sisCommerce.App_GlobalResources.Site.resources
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\obj\Debug\sisCommerce.App_GlobalResources.Site.en-us.resources
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\obj\Debug\sisCommerce.csproj.GenerateResource.Cache
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\obj\Debug\sisCommerce.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\obj\Debug\en-us\sisCommerce.resources.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\obj\Debug\sisCommerce.dll
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\obj\Debug\sisCommerce.pdb
+C:\Users\Gabriel\Documents\sisCommerce\sisCommerce\obj\Debug\sisCommerce.csprojResolveAssemblyReference.cache
