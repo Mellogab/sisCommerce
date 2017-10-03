@@ -112,6 +112,42 @@ namespace sisCommerce.Repository
             return prod;
         }
 
+        //return product from parameter idProduct
+        public Products getProductById()
+        {
+            Products prod;
+
+            try
+            {
+                using (IDbConnection connection = new SqlConnection(ConnectionString))
+                {
+                    if (connection.State == ConnectionState.Closed) connection.Open();
+                    string query = "SELECT * FROM [sisCommerce].[dbo].[Products] where [id] = @IdProduct";
+
+                    Dictionary<string, object> dictionary = new Dictionary<string, object>();
+                    dictionary.Add("@IdProduct", this.prod.id);
+                    
+                    var objects = connection.QueryFirstOrDefault<Products>(query, new DynamicParameters(dictionary));
+                    connection.Close();
+
+                    prod = new Products(){
+                        id = Convert.ToInt32(objects.id),
+                        name = Convert.ToString(objects.name),
+                        description = Convert.ToString(objects.description),
+                        price = (objects.price),
+                        quantify = Convert.ToInt32(objects.quantify),
+                        image = Convert.ToString(objects.image),
+                        image_base64 = Convert.ToString(objects.image_base64)
+                    };
+                    return prod;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public bool insertProduct()
         {
             try

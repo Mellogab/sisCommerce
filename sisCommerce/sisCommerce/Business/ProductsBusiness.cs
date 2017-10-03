@@ -54,6 +54,11 @@ namespace sisCommerce.Business
             return new ProductsRepository().getProducts();
         }
 
+        public Products getProductById()
+        {
+            return new ProductsRepository(this.prod).getProductById();
+        }
+
         public bool insertProducts()
         {
             try
