@@ -16,5 +16,9 @@ namespace sisCommerce.Models
         public string image { get; set; }
         public int idUser { get; set; }
         public int idSale { get; set; }
+        public float totalPriceByProduct { get; set; }
+        public float subtotal { get; set; }
+        public float estimatedShipping { get; set; }
+        public float total { get; set; }
     }
 }

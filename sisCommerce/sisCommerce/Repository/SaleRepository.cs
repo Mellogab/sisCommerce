@@ -25,6 +25,33 @@ namespace sisCommerce.Business
         {
         }
 
+        public Boolean DeleteProductToShoppingCart()
+        {
+            try
+            {
+                using (IDbConnection connection = new SqlConnection(ConnectionString))
+                {
+                    if (connection.State == ConnectionState.Closed) connection.Open();
+                    string query = "Delete from SaleItems where idProduct = @IdProduct";
+
+                    Dictionary<string, object> dictionary = new Dictionary<string, object>();
+                    dictionary.Add("@IdProduct", this.saleItems.idProduct);
+
+                    var result = connection.Execute(query, new DynamicParameters(dictionary));
+                    connection.Close();
+
+                    if (result == 1) return true;
+
+                    return false;
+                }
+            }
+            catch (SqlException e)
+            {
+
+                throw e;
+            }
+        }
+
         public bool addProductToShoppingCart() {
             try
             {

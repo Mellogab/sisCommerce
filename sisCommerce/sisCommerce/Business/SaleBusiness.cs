@@ -12,7 +12,8 @@ namespace sisCommerce.Business
         private SaleRepository saleRepository;
         private Products products;
         private ProductsBusiness productsBusiness;
-        private ShoppingCartViewModel shoppingCart;
+        //private ShoppingCartViewModel shoppingCartViewModel;
+        private List<ShoppingCart> shoppingCart;
 
         public SaleBusiness(SaleItems saleItems)
         {
@@ -24,14 +25,50 @@ namespace sisCommerce.Business
             this.products = products;
         }
 
+        public SaleBusiness(int id)
+        {
+            saleItems = new SaleItems();
+            this.saleItems.idProduct = id;
+        }
+
         public SaleBusiness()
         {
         }
 
+        public Boolean DeleteProductToShoppingCart()
+        {
+            if(new SaleRepository(saleItems).DeleteProductToShoppingCart())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public List<ShoppingCart> getListShoppingCart()
         {
+            shoppingCart = new List<ShoppingCart>();
             saleRepository = new SaleRepository();
-            return saleRepository.getListShoppingCart();
+            float _subtotal = 0;
+
+            shoppingCart =  saleRepository.getListShoppingCart();
+
+            foreach(var item in shoppingCart)
+            {
+                //calculo do preço por preço
+                item.totalPriceByProduct = item.amount * item.price;
+                //soma no subtotal
+                _subtotal += item.totalPriceByProduct;
+            }
+
+            foreach (var item in shoppingCart)
+            {
+                item.subtotal = _subtotal;
+                item.estimatedShipping = ((item.subtotal/100) * 10);
+                item.total = (item.subtotal + item.estimatedShipping);
+            }
+            
+            return shoppingCart;
         }
 
         public bool AddProductToShoppingCart()

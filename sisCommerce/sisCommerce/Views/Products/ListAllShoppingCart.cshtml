@@ -21,61 +21,69 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach (var item in Model)
+                    {
                     <tr>
                         <td class="col-sm-8 col-md-6">
                             <div class="media">
-                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+                                <a class="thumbnail pull-left" href="#"> <img class="media-object img-responsive" src="@Url.Content(item.image)" style="width: 72px; height: 72px;"> </a>
                                 <div class="media-body">
-                                    <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                    <h4 class="media-heading"><a href="#">@Html.DisplayFor(modelItem => item.name)</a></h4>
                                     <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
                                     <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
                                 </div>
                             </div>
                         </td>
                         <td class="col-sm-1 col-md-1" style="text-align: center">
-                            <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                            <input class="form-control" id="exampleInputEmail1" value="@Html.DisplayFor(Model => item.amount)" disabled>
                         </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
+                        
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$@Html.DisplayFor(Model => item.price)</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$@Html.DisplayFor(Model => item.totalPriceByProduct)</strong></td>
                         <td class="col-sm-1 col-md-1">
-                            <button type="button" class="btn btn-danger">
+                        @using (Html.BeginForm("DeleteProductToShoppingCart", "Products", FormMethod.Post))
+                        {
+                            @Html.ValidationSummary(true)
+                            <input type="hidden" name="id" value="@Html.DisplayFor(Model => item.idProduct)"/>
+                            <button type="submit" class="btn btn-danger">
                                 <span class="glyphicon glyphicon-remove"></span> Remove
                             </button>
+                        }
                         </td>
                     </tr>
-
+                    }
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><h5><strong>$24.59</strong></h5></td>
+                        <td class="text-right"><h5><strong>$@Html.DisplayFor(Model => Model.FirstOrDefault().subtotal)</strong></h5></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h5>Estimated shipping</h5></td>
-                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                        <td class="text-right"><h5><strong>$@Html.DisplayFor(Model => Model.FirstOrDefault().estimatedShipping)</strong></h5></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h3>Total</h3></td>
-                        <td class="text-right"><h3><strong>$31.53</strong></h3></td>
+                        <td class="text-right"><h3><strong>$@Html.DisplayFor(Model => Model.FirstOrDefault().total)</strong></h3></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td>
-                            <button type="button" class="btn btn-default">
+                            <a class="btn btn-default" href="/Menu/Index" >
                                 <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-                            </button>
+                            </a>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-success">
+                            <button data-toggle="modal" data-target="#squarespaceModal" type="button" class="btn btn-success">
                                 Checkout <span class="glyphicon glyphicon-play"></span>
                             </button>
                         </td>
@@ -85,3 +93,125 @@
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="container">
+            <div class="row">
+            @using (Html.BeginForm("ShoppingCartCheckout", "Product", FormMethod.Post))
+            {
+                @Html.ValidationSummary(true)
+                <div class="col-xs-12 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Payment Details
+                            </h3>
+                            <div class="checkbox pull-right">
+                                <label>
+                                    <input type="checkbox" />
+                                    Remember
+                                </label>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div id="errorMessage"></div>
+                                
+                            <div class="form-group">
+                                    <label for="cardNumber">
+                                        CARD NUMBER
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                               required autofocus onkeyup="validaNroCartao();"/>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-xs-7 col-md-7">
+                                        <div class="form-group">
+                                            <label for="expityMonth">
+                                                EXPIRY DATE
+                                            </label>
+                                            <div class="col-xs-6 col-lg-6 pl-ziro">
+                                                <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                            </div>
+                                            <div class="col-xs-6 col-lg-6 pl-ziro">
+                                                <input type="text" class="form-control" id="expityYear" placeholder="YY" required />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-5 col-md-5 pull-right">
+                                        <div class="form-group">
+                                            <label for="cvCode">
+                                                CV CODE
+                                            </label>
+                                            <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                        </div>
+                                    </div>
+                                
+                                </div>
+
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-pills nav-stacked">
+                    
+                        <li class="active">
+                            <a href="#">
+                                <span class="badge pull-right">
+                                    <span class="glyphicon glyphicon-usd"></span>
+                                    @Html.DisplayFor(Model => Model.FirstOrDefault().total)
+                                </span>
+                                Final Payment
+                            </a>
+                        </li>
+
+                    </ul>
+                    
+                    <br />
+                    
+                    <button id="btnSendCheckout" type="submit" class="btn btn-success btn-lg btn-block" role="button">Pay</button>
+                </div>  
+            }
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    var cartoes = {
+    Visa: /^4[0-9]{12}(?:[0-9]{3})/,
+    Mastercard: /^5[1-5][0-9]{14}/,
+    Amex: /^3[47][0-9]{13}/,
+    DinersClub: /^3(?:0[0-5]|[68][0-9])[0-9]{11}/,
+    Discover: /^6(?:011|5[0-9]{2})[0-9]{12}/,
+    JCB: /^(?:2131|1800|35\d{3})\d{11}/
+    };
+
+    function testarCC(nr, cartoes) {
+        for (var cartao in cartoes) if (nr.match(cartoes[cartao])) return cartao;
+        return false;
+    }
+
+    function validaNroCartao() {
+        var nroCartao = $("#cardNumber").val();
+        
+        var result = testarCC(nroCartao, cartoes);
+        console.log(result);
+        if (result != false) {
+            $("#errorMessage").html(result);
+            $("#btnSendCheckout").attr("type", "submit");
+            validData(result);
+        } else {
+            $("#btnSendCheckout").attr("type", "button");
+            $("#errorMessage").html("Número de cartão inválido!");
+            validData(result);
+        }
+    }
+</script>

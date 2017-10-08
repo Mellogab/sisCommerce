@@ -90,10 +90,30 @@ namespace sisCommerce.Controllers
         public ActionResult ListAllShoppingCart()
         {
             ViewBag.Message = "";
+
             saleBusiness = new SaleBusiness();
             var result = saleBusiness.getListShoppingCart();
+
+            ViewBag.Name = new CurrentUser().getUserSession().name;
             ViewBag.Message = "ListAllShoppingCart";
+
             return View(result);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteProductToShoppingCart(int id)
+        {
+            new SaleBusiness(id).DeleteProductToShoppingCart();
+
+            ViewBag.Message = "";
+
+            saleBusiness = new SaleBusiness();
+            var result = saleBusiness.getListShoppingCart();
+
+            ViewBag.Name = new CurrentUser().getUserSession().name;
+            ViewBag.Message = "ListAllShoppingCart";
+
+            return View("ListAllShoppingCart", result);
         }
 
         [HttpPost]
