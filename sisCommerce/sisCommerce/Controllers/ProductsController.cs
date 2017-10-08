@@ -13,7 +13,8 @@ namespace sisCommerce.Controllers
 
         private ProductsBusiness pBusiness;
         private MainController mController;
-        
+        private SaleBusiness saleBusiness;
+
         public ProductsController()
         {
             pBusiness = new ProductsBusiness();
@@ -72,6 +73,27 @@ namespace sisCommerce.Controllers
                 return View("AccessDenied");
             }
             
+        }
+
+        [HttpPost]
+        public ActionResult InsertProductAtShoppingCart(Products products)
+        {
+            var prods = pBusiness.getProductsAndShoppingList();
+            saleBusiness = new SaleBusiness(products);
+            saleBusiness.AddProductToShoppingCart();
+            
+            ViewBag.Name = new CurrentUser().getUserSession().name;
+            ViewBag.Message = "Produto Adicionado ao Carrinho!";
+            return View("../Menu/Index", prods);
+        }
+
+        public ActionResult ListAllShoppingCart()
+        {
+            ViewBag.Message = "";
+            saleBusiness = new SaleBusiness();
+            var result = saleBusiness.getListShoppingCart();
+            ViewBag.Message = "ListAllShoppingCart";
+            return View(result);
         }
 
         [HttpPost]

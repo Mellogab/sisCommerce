@@ -5,12 +5,16 @@ using System.Web;
 
 namespace sisCommerce.Models
 {
-    public class ShoppingListTest
+    public class ShoppingCart
     {
-        public int quantity_wish_user { get; set; }
+        public int idSaleItem { get; set; }
+        public int idProduct { get; set; }
+        public int amount { get; set; }
         public string name { get; set; }
         public float price { get; set; }
         public int quantify { get; set; }
         public string image { get; set; }
+        public int idUser { get; set; }
+        public int idSale { get; set; }
     }
 }

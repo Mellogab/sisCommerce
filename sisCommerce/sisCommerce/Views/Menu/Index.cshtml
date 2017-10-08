@@ -110,7 +110,19 @@
                 </div>
                 <div class="productprice">
                     <div class="pull-right">
-                        <a href="#" class="btn btn-danger btn-sm" role="button"><b>BUY</b></a>
+                        @if (!(@Html.Raw(ViewBag.Name).ToString() == null || @Html.Raw(ViewBag.Name).ToString() == "" || @Html.Raw(ViewBag.Name).ToString() == "Usuário/Senha incorretos"))
+                        {
+                            using (Html.BeginForm("InsertProductAtShoppingCart", "Products", FormMethod.Post))
+                            {
+                                @Html.ValidationSummary(true)
+                                <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => item.id)" />
+                                <button type="submit" class="btn btn-danger btn-sm"><b>BUY</b></button>
+                            }
+                        }
+                        else
+                        {
+                            <a href="#" class="btn btn-danger btn-sm" role="button"><b>BUY</b></a>
+                        }
                     </div>
                     <div class="pricetext">R$ @Html.DisplayFor(modelItem => item.price)</div>
                 </div>

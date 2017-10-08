@@ -72,7 +72,10 @@
                         </div>    
                     </li>
 
-                    <li><a href="#" class="[ animate ]">@Resources.Site.Carrinho @Resources.Site.de @Resources.Site.Compras</a></li>
+                    <li>
+                            @Html.ActionLink(Resources.Site.Carrinho+" "+ Resources.Site.de+" "+ Resources.Site.Compras, "ListAllShoppingCart", "Products")
+                       
+                    </li>
 
                     <li>
                         <a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">@Resources.Site.Produtos<span class="[ caret ]"></span></a>
@@ -87,8 +90,8 @@
                     
                     @{ Html.RenderPartial("_Login");  }
                     
-                    @{ Html.RenderPartial("_ShoppingListDropDown"); }
-
+                    <!--Html.RenderPartial("_ShoppingListDropDown");-->
+                    
                     <li class="[ hidden-xs ]"><a href="#toggle-search" class="[ animate ]"><span class="[ glyphicon glyphicon-search ]"></span></a></li>
                 </ul>
             </div>
